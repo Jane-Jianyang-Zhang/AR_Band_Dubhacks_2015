@@ -1,0 +1,78 @@
+﻿<Page
+    x:Class="BandSensors.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BandSensors"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Margin="0,0,0,10">
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button x:Name="ButtonRun" Content="Run" HorizontalAlignment="Center" Click="ButtonRun_Click" FontSize="20" Margin="10,0,10,0"/>
+                <Button x:Name="ButtonStop" Content="Stop" IsEnabled="False" Click="ButtonStop_Click" FontSize="20" Margin="10,0,10,0"/>
+            </StackPanel>
+
+        </Grid>
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="Clicking 'run' will start collecting data from your Microsoft Band in real-time."></TextBlock>
+            <TextBlock Text="This data is sent to Firebase which then displays the data onto our augmented reality Band."></TextBlock>
+            <TextBlock Text="Clicking 'stop' will stop this app from collecting data."></TextBlock>
+
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" FontSize="20" Text="Accelerometer :"/>
+            <TextBlock Grid.Row="0" Grid.Column="1" x:Name="txtAccelerometer" FontSize="20" TextWrapping="Wrap" Text=""/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" FontSize="20" Text="Calories :"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" x:Name="txtCalories" FontSize="20" />
+
+            <TextBlock Grid.Row="2"  Grid.Column="0" FontSize="20" Text="Contact :" />
+            <TextBlock Grid.Row="2" Grid.Column="1" x:Name="txtContact" FontSize="20"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" FontSize="20" Text="Distance :"/>
+            <TextBlock Grid.Row="3"  Grid.Column="1" x:Name="txtDistance" FontSize="20" />
+
+            <TextBlock Grid.Row="4"  Grid.Column="0" FontSize="20" Text="Gyroscope :" />
+            <TextBlock Grid.Row="4" Grid.Column="1" x:Name="txtGyroscope" FontSize="20" TextWrapping="Wrap" Text="" />
+
+            <TextBlock Grid.Row="5"  Grid.Column="0" FontSize="20" Text="Heart Rate :"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" x:Name="txtHR" FontSize="20" TextWrapping="Wrap" Text="" />
+
+            <TextBlock Grid.Row="6" Grid.Column="0" FontSize="20" Text="Pedometer :" />
+            <TextBlock Grid.Row="6" Grid.Column="1" x:Name="txtPedometer" FontSize="20" TextWrapping="Wrap" Text="" />
+
+            <TextBlock Grid.Row="7" Grid.Column="0" FontSize="20" Text="Skin Temperature :"/>
+            <TextBlock Grid.Row="7" Grid.Column="1" x:Name="txtSkinTemp" FontSize="20" TextWrapping="Wrap" Text=""/>
+
+            <TextBlock Grid.Row="8" Grid.Column="0" FontSize="20" Text="UV :" />
+            <TextBlock Grid.Row="8" Grid.Column="1" x:Name="txtUV" FontSize="20" TextWrapping="Wrap" Text="" />
+        </Grid>
+
+    </Grid>
+</Page>

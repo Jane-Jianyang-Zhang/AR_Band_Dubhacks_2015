@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:epxheader.4,0:sprite;/Areas/Epx/Themes/VStudio/Content:0&amp;amp;v=6677F904E9874AAAD6E7BDC42C27086B" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:epxfooter.4,0:sprite;/Areas/Epx/Themes/VStudio/Content:0&amp;amp;v=D3CF9F3CF7A84DCDE3BDD6B29CF669BA" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Microsoft Band Sensors - Simple Universal Windows App</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/1724be73-96ad-4267-aa81-ccdcef40b373Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/vstudio/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/vstudio/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Microsoft Band Sensors - Simple Universal Windows App</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C#, Bluetooth, universal windows app, Visual Studio 2015, microsoft band
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Bluetooth, Sensors, Devices and sensors, universal windows app, microsoft band
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Phone, Windows RT
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">7/31/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/vstudio/Band-Sensors-Simple-dab579d8">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<p><em>This is the first Universal Windows sample app for the Microsoft Band targetting VS2015.</em></p>
+<p><em>The Microsoft Band SDK comes with a sample app for VS2013.</em></p>
+<p><em>VS2015, Windows 10 and the Windows 10 SDK have been released so this is to start you going with the latest development tools and the Universal Windows Platform.</em></p>
+<p><em>This sample takes readings from all the sensors exposed by the Microsoft Band SDK for your convenience.</em></p>
+<p><em>Learn by example and save one hour fiddling around!<br>
+</em></p>
+<h1><span>Building the Sample</span></h1>
+<p><em>This sample requires Visual Studio 2015 RTM Community edition: yes the free version.</em></p>
+<p><em>The project requires the NuGet Package : Microsoft Band SDK (should be automatically refreshed)</em></p>
+<p><em>&nbsp;</em><em>The Windows 10 SDK : should be distributed with all VS2015 editions.</em></p>
+<p><em>You will need a Microsoft Band bluetooth-paired to your development machine or targetted device.</em></p>
+<p><em>There are no Microsoft Band emulators at this time... </em></p>
+<p><em><img id="140632" src="https://i1.code.msdn.s-msft.com/vstudio/band-sensors-simple-dab579d8/image/file/140632/1/nuget-microsoftbandsdk-profile-600x333.jpg" alt="" width="600" height="333"><br>
+</em></p>
+<p><span style="font-size:20px; font-weight:bold">Description</span></p>
+<p><em>This sample shows that the Microsoft Band SDK that originally targetted VS2013 does work fine with VS2015.</em></p>
+<p><em>To reproduce this project from scratch:</em></p>
+<ul>
+<li><em>Start with a new blank</em> <em>Universal Windows App project</em> </li><li><em>Use NuGet Package Manager to find and install the latest Microsoft Band SDK</em>
+</li><li><em>Manually update the app manifest with the correct bluetooth permissions as the designer does not yet support the required settings.</em>
+</li><li><em>Add code to connect to the Band, subscribe to the sensors' data and take samples for 10 seconds.</em>
+</li></ul>
+<div><em>I will publish a blog post to compliment this sample and update this description to the step-by-step guide as soon as it is published.</em></div>
+<p><em>If you run the app without first bluetooth-pairing the Band to the device running the sample app you will receive an error. To pair the devices, on the Band go to settings, bluetooth, pairing. Go to the device that will run the UWA and find your Band
+ in the bluetooth settings.</em></p>
+<p><em>This app samples all the sensors currently available in the Microsoft Band SDK:</em></p>
+<ul>
+<li><em>Accelerometer</em> </li><li><em>Calories</em> </li><li><em>Contact<br>
+</em></li><li><em>Distance</em> </li><li><em>Gyroscope</em> </li><li><em>HeartRate</em> </li><li><em>Pedometer<br>
+</em></li><li><em>SkinTemperature</em> </li><li><em>UV</em> </li></ul>
+<p><em>T</em><em>here are hundreds of accelerometer and gyroscope readings per second so the app only displays every 20th reading so as not to overwhelm the UI with updates.
+</em></p>
+<p><em>The app connects to your Microsoft Band and attempts to take readings for 10 seconds when you click the 'Run' button.</em></p>
+<p><em>After the 10 second sample period, the app deletes the sensor subscriptions and displays a summary of the number of readings received from each sensor.<br>
+</em></p>
+<p><img id="140631" src="https://i1.code.msdn.s-msft.com/vstudio/band-sensors-simple-dab579d8/image/file/140631/1/bandsensorrundone-600x479.jpg" alt="" width="600" height="479"></p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">                // Get the list of Microsoft Bands paired to the phone.
+                IBandInfo[] pairedBands = await BandClientManager.Instance.GetBandsAsync();
+                if (pairedBands.Length &lt; 1)
+                {
+                    this.StatusMessage.Text = &quot;This sample app requires a Microsoft Band paired to your device. Also make sure that you have the latest firmware installed on your Band, as provided by the latest Microsoft Health app.&quot;;
+                    return;
+                }
+
+                // Connect to Microsoft Band.
+                using (IBandClient bandClient = await BandClientManager.Instance.ConnectAsync(pairedBands[0]))
+                {
+                    if (bandClient.SensorManager.HeartRate.GetCurrentUserConsent() != UserConsent.Granted)
+                    {
+                        await bandClient.SensorManager.HeartRate.RequestUserConsentAsync();
+                    }
+
+                    int samplesReceivedAcc = 0; // the number of Accelerometer samples received
+                    // etc..
+
+                    // Subscribe to Accelerometer data.
+                    bandClient.SensorManager.Accelerometer.ReadingChanged &#43;= (s, args) =&gt;
+                    {
+                        samplesReceivedAcc&#43;&#43;;
+                        if ((samplesReceivedAcc % 20) == 0)
+                        {
+                            // Only report occasional Accelerometer data
+                            IBandAccelerometerReading readings = args.SensorReading;
+                            CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =&gt;
+                            {
+                                this.txtAccelerometer.Text = readings.AccelerationX.ToString() &#43; &quot; &quot; &#43; readings.AccelerationY.ToString() &#43; &quot; &quot; &#43; readings.AccelerationZ.ToString();
+                            });
+                        }
+                    };
+                    await bandClient.SensorManager.Accelerometer.StartReadingsAsync();
+
+                    // Subscribe to Calories data.
+                    bandClient.SensorManager.Calories.ReadingChanged &#43;= (s, args) =&gt;
+                    {
+                        samplesReceivedCal&#43;&#43;;
+                        IBandCaloriesReading readings = args.SensorReading;
+                        CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =&gt;
+                        {
+                            this.txtCalories.Text = readings.Calories.ToString();
+                        });
+                    };
+                    await bandClient.SensorManager.Calories.StartReadingsAsync();
+</pre>
+<div class="preview">
+<pre class="csharp">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Get&nbsp;the&nbsp;list&nbsp;of&nbsp;Microsoft&nbsp;Bands&nbsp;paired&nbsp;to&nbsp;the&nbsp;phone.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBandInfo[]&nbsp;pairedBands&nbsp;=&nbsp;await&nbsp;BandClientManager.Instance.GetBandsAsync();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(pairedBands.Length&nbsp;&lt;&nbsp;<span class="cs__number">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.StatusMessage.Text&nbsp;=&nbsp;<span class="cs__string">&quot;This&nbsp;sample&nbsp;app&nbsp;requires&nbsp;a&nbsp;Microsoft&nbsp;Band&nbsp;paired&nbsp;to&nbsp;your&nbsp;device.&nbsp;Also&nbsp;make&nbsp;sure&nbsp;that&nbsp;you&nbsp;have&nbsp;the&nbsp;latest&nbsp;firmware&nbsp;installed&nbsp;on&nbsp;your&nbsp;Band,&nbsp;as&nbsp;provided&nbsp;by&nbsp;the&nbsp;latest&nbsp;Microsoft&nbsp;Health&nbsp;app.&quot;</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">return</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Connect&nbsp;to&nbsp;Microsoft&nbsp;Band.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">using</span>&nbsp;(IBandClient&nbsp;bandClient&nbsp;=&nbsp;await&nbsp;BandClientManager.Instance.ConnectAsync(pairedBands[<span class="cs__number">0</span>]))&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;(bandClient.SensorManager.HeartRate.GetCurrentUserConsent()&nbsp;!=&nbsp;UserConsent.Granted)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;bandClient.SensorManager.HeartRate.RequestUserConsentAsync();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">int</span>&nbsp;samplesReceivedAcc&nbsp;=&nbsp;<span class="cs__number">0</span>;&nbsp;<span class="cs__com">//&nbsp;the&nbsp;number&nbsp;of&nbsp;Accelerometer&nbsp;samples&nbsp;received</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;etc..</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Subscribe&nbsp;to&nbsp;Accelerometer&nbsp;data.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bandClient.SensorManager.Accelerometer.ReadingChanged&nbsp;&#43;=&nbsp;(s,&nbsp;args)&nbsp;=&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samplesReceivedAcc&#43;&#43;;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">if</span>&nbsp;((samplesReceivedAcc&nbsp;%&nbsp;<span class="cs__number">20</span>)&nbsp;==&nbsp;<span class="cs__number">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Only&nbsp;report&nbsp;occasional&nbsp;Accelerometer&nbsp;data</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBandAccelerometerReading&nbsp;readings&nbsp;=&nbsp;args.SensorReading;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,&nbsp;()&nbsp;=&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.txtAccelerometer.Text&nbsp;=&nbsp;readings.AccelerationX.ToString()&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;readings.AccelerationY.ToString()&nbsp;&#43;&nbsp;<span class="cs__string">&quot;&nbsp;&quot;</span>&nbsp;&#43;&nbsp;readings.AccelerationZ.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;bandClient.SensorManager.Accelerometer.StartReadingsAsync();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__com">//&nbsp;Subscribe&nbsp;to&nbsp;Calories&nbsp;data.</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bandClient.SensorManager.Calories.ReadingChanged&nbsp;&#43;=&nbsp;(s,&nbsp;args)&nbsp;=&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;samplesReceivedCal&#43;&#43;;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBandCaloriesReading&nbsp;readings&nbsp;=&nbsp;args.SensorReading;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,&nbsp;()&nbsp;=&gt;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="cs__keyword">this</span>.txtCalories.Text&nbsp;=&nbsp;readings.Calories.ToString();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;await&nbsp;bandClient.SensorManager.Calories.StartReadingsAsync();&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<h1><span>Source Code Files</span></h1>
+<ul>
+<li><em>MainPage.xaml.cs - code-behind file for the simple sensor data screen</em>
+</li></ul>
+<h1>More Information</h1>
+<p><em>You must enable your Windows 10 machine for development or you will see package reference errors:</em></p>
+<p><em><img id="140633" src="https://i1.code.msdn.s-msft.com/vstudio/band-sensors-simple-dab579d8/image/file/140633/1/enable%20developer%20mode%20for%20windows%2010.jpg" alt="" width="426" height="282"><br>
+</em></p>
+<p><img id="140635" src="https://i1.code.msdn.s-msft.com/vstudio/band-sensors-simple-dab579d8/image/file/140635/1/turn%20on%20developer%20mode%20480x171.jpg" alt="" width="480" height="171"></p>
+<p>&nbsp;</p>
+<p><em>For more information on the Microsoft Band:</em></p>
+<p><a title="Official Microsoft Band Site" href="http://www.microsoft.com/microsoft-band/" >Microsoft Band</a></p>
+<p><a title="Microsoft Band for Devs" href="http://developer.microsoftband.com/" >Microsoft Band for Developers</a></p>
+<p><a title="Microsoft Band SDK and samples" href="http://developer.microsoftband.com/bandSDK" >Microsoft Band SDK and samples</a></p>
+<p><em>Visual Studio:</em></p>
+<p><em><a title="Visual Studio 2015" href="https://code.msdn.microsoft.com/vstudio/Band-Sensors-Simple-dab579d8/https://www.visualstudio.com/" >Visual Studio 2015 Product Family</a></em></p>
+<p><em><a title="Soma's Blog post" href="http://blogs.msdn.com/b/somasegar/archive/2015/07/29/building-apps-for-windows-10-with-visual-studio-2015.aspx?utm_content=buffer8c4a5&amp;utm_medium=social&amp;utm_source=twitter.com&amp;utm_campaign=buffer&amp;wa=wsignin1.0" >Building
+ Apps for Windows 10 with Visual Studio 2015</a></em></p>
+<p><em><a title="How to specify device capabilities" href="https://code.msdn.microsoft.com/vstudio/Band-Sensors-Simple-dab579d8/https://msdn.microsoft.com/en-gb/library/windows/apps/dn263090.aspx" >How to specify device capabilities for bluetooth</a></em></p>
+<p><em><br>
+</em></p>
+
+</div>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+D:\EricY\Downloads\Microsoft Band Sensors - Simple Universal Windows App (1)\C#\BandSensors\BandSensors.csproj;x64
